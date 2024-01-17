@@ -11,8 +11,8 @@ export default function Home() {
       <div className="w-full bg-center">
         <Navbar />
         <Banner />
-        <About/>
-        <Services/>
+        <About />
+        <Services />
       </div>
     </>
   );
