@@ -4,6 +4,8 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
+import logo from "../public/images/logo.PNG"
+import Image from "next/image";
 
 
 const navigation = [
@@ -65,11 +67,11 @@ export default function Navbar() {
                     header ? "text-xl text-white" : "text-xl text-gray-900"
                   } flex flex-shrink-0 items-center`}
                 >
-                  Keneith
+                  {/* <Image src={logo} className="h-14 w-auto"/> */}
                 
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 itemsc">
                     {navigation.map((item) => (
                       <a
                         key={item.name}

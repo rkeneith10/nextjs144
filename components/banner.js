@@ -1,7 +1,7 @@
 import React from "react";
 
 import BackImage from "../public/images/ken.jpg";
-import BackImage1 from "../public/images/imagessssssss.jpg";
+import BackImage1 from "../public/images/banner.PNG";
 
 const Banner = () => {
   return (
@@ -20,12 +20,10 @@ const Banner = () => {
           </h1>
           <br />
           <p className="text-white">
-            Welcome to my portfolio, a showcase of my skills and passion for
-            software development and graphic design. Here, you'll find a
-            collectión of my finest creations, from visually stunning websites
-            to sleek mobile applications. I infuse each project with a blend of
-            my heart and skill, ensuring that the final product reflects true
-            dedication and expertise.
+            Welcome to my portfolio, a place to show all my love and passion for
+            the technology world specially the web and mobile development.
+            programming is like a therapy session because it helps me forget all
+            my problems. One of the things that really makes me happy.
           </p>
         </div>
       </div>
