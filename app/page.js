@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Navbar from "../components/navbar";
 import Banner from "../components/banner";
 import About from "../components/about";
+import Services from "../components/services";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Navbar />
         <Banner />
         <About/>
+        <Services/>
       </div>
     </>
   );
