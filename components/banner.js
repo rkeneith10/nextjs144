@@ -18,7 +18,7 @@ const Banner = () => {
           Keneith Salnave Romain
         </h1>
         <h1 className="text-4xl   text-white font-bold ">
-         I build things for the web.
+         I build cool things for the web.
         </h1>
         <br/>
         <p className="text-white">Welcome to my portfolio, a showcase of my skills and passion for software development and graphic design. Here, you'll find a collectión of my finest creations, from visually stunning websites to sleek mobile applications.
