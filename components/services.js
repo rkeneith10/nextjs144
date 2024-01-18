@@ -21,12 +21,12 @@ const Services = () => {
         </div>
 
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
-        <h1 className="font-bold text-xl" >App Development</h1> <br/> make things simpler with an Android or iOS mobile app.
+        <h1 className="font-bold text-xl" >App Development</h1> make things simpler with an Android or iOS mobile app.
           Stay connected to your activities wherever you are.
         </div>
 
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
-        <h1 className="font-bold text-xl">Reponsive Design</h1> <br/> We create design that automatically adapts the
+        <h1 className="font-bold text-xl">Reponsive Design</h1> We create design that automatically adapts the
           screen of any device such as PC tablet or smartphone.
         </div>
       </div>
