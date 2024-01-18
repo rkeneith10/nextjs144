@@ -17,7 +17,7 @@ const Services = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
           <h1 className="font-bold text-xl">Web Development</h1> Building and maintenance of website for a better
-          presentation on the web.
+          looking on the web.
         </div>
 
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
@@ -27,7 +27,7 @@ const Services = () => {
 
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
         <h1 className="font-bold text-xl">Reponsive Design</h1> We create design that automatically adapts the
-          screen of any device such as PC tablet or smartphone.
+          screen of any devices such as PC tablet or smartphone.
         </div>
       </div>
     </div>

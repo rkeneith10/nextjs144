@@ -18,10 +18,10 @@ const Banner = () => {
           </h1>
           <br />
           <p className="text-white">
-            Welcome to my portfolio, a place to show all my love and passion for
-            the technology world specially the web and mobile development.
-            programming is like a therapy session because it helps me forget all
-            my problems. One of the things that really makes me happy.
+            Welcome to my portfolio, a space where I channel my love and passion
+            for the tech-oriented world, particularly web and mobile app
+            development. Programming serves as a therapeutic session for me,
+            relieving daily worries and bringing me joy and happiness.
           </p>
         </div>
       </div>

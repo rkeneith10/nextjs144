@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import profileImage from "../public/images/me.jpeg";
 
 const About = () => {
@@ -12,43 +12,38 @@ const About = () => {
         </h1>
         <br />
         <p>
-          Hey, My name is Keneith Salnave Romain. I am a Software developer, a
-          technology lover with over five year in web and mobile development. I
-          like to provide solutions to all problems using technologies. Although
-          I am more focused on backend development, but in recent years I spend
-          a lot of time learning what's new on the frontend development because
-          my dream is to become a good fullstack developer. I'm also passionate
-          about music and movies/TV shows. I'm always curious to learn more when
-          it comes to new technologies and creative coding. Thank you for
-          visiting my portfolio, if you want to know more about me, you can
-          leave me a message in the contact section below or follow me on my
-          social media pages.
+          My name is Keneith Salnave Romain, a Software Developer, technology
+          enthusiast with over five years in web and mobile development. My
+          focus has primarily been on backend development, but in recent years,
+          I've dedicated a significant amount of time to staying updated on
+          frontend technologies. My goal is to become a proficient fullstack
+          developer. Aside from my love for coding, I have a passion for music,
+          movies, and TV shows. I'm always eager to explore new technologies and
+          engage in creative coding. Thank yo for visiting my portfolio, if you
+          would like to know more about me, feel free to leave a message in the
+          contact section below or follow me on my social media pages.
         </p>
         <br />
         <div className="flex flex-row ">
-          <a href="#">
+          <a href="https://www.instagram.com/rkeneith/">
             <FaInstagram size={30} className="mr-2" />
           </a>
 
-          <a href="#">
-            <FaFacebook size={30} className="mr-2" />
-          </a>
-
-          <a href="#">
+          <a href="https://twitter.com/rkeneith">
             <FaTwitter size={30} className="mr-2" />
           </a>
 
-          <a href="#">
+          <a href="https://www.linkedin.com/in/keneith-salnave-romain/">
             <FaLinkedin size={30} className="mr-2" />
+          </a>
+
+          <a href="https://github.com/rkeneith10">
+            <FaGithub size={30} className="mr-2" />
           </a>
         </div>
       </div>
       <div className=" text-gray-500  lg:pl-10 sm:pt-10 lg:w-1/4 w-full lg:mt-0 mt-10">
-        <Image
-          src={profileImage}
-         className="rounded-md"
-         
-        />
+        <Image src={profileImage} className="rounded-md" />
       </div>
     </div>
   );
