@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import profileImage from "../public/images/profile.jpeg";
+import profileImage from "../public/images/me.jpeg";
 
 const About = () => {
   return (
@@ -46,9 +46,8 @@ const About = () => {
       <div className=" text-gray-500  lg:pl-10 sm:pt-10 lg:w-1/4 w-full lg:mt-0 mt-10">
         <Image
           src={profileImage}
-          className="rounded-full"
-          width={900} // Largeur de l'image
-          height={600} // Hauteur de l'image
+         className="rounded-md"
+         
         />
       </div>
     </div>

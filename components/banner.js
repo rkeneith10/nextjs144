@@ -1,6 +1,4 @@
 import React from "react";
-
-import BackImage from "../public/images/ken.jpg";
 import BackImage1 from "../public/images/banner.PNG";
 
 const Banner = () => {
