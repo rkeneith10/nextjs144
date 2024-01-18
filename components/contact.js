@@ -5,7 +5,7 @@ import BackImage from "../public/images/bannerContact.jpeg";
 const Contact = () => {
   return (
     <div
-      className="h-[650px] lg:h-[550px] max-w-screen-2xl mx-auto flex flex-col  p-7 lg:p-40 lg:pt-5 bg-center bg-cover bg-no-repeat"
+      className="h-[750px] lg:h-[550px] max-w-screen-2xl mx-auto flex flex-col  p-7 lg:p-40 lg:pt-5 bg-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${BackImage.src})` }}
     >
       <div className="max-w-screen">
