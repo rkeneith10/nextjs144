@@ -29,24 +29,24 @@ const Skills = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
         <div className="flex flex-col  p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
           <h1 className="font-bold text-xl">Programming Languages</h1><br/> <p>Proficient in HTML, CSS, JavaScript, PHP, and Dart.”</p>
-	<p>•	“Experience with server-side scripting using Node.js and PHP.”</p>
-	<p>•	“Solid understanding of object-oriented programming concepts.”</p>
+	<p>Experience with server-side scripting using Node.js and PHP.”</p>
+	<p>Solid understanding of object-oriented programming concepts.”</p>
 
 	
         </div>
 
         <div className="flex flex-col p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
           <h1 className="font-bold text-xl">Frameworks and Libraries</h1> <br/>
-          <p>•Extensive knowledge of React.js for building dynamic and responsive web applications</p>
-          <p>•Familiar with Flutter and Dart for cross-platform mobile app development.</p>
-          <p>•Comfortable working with various front-end and back-end frameworks.</p>
+          <p>Extensive knowledge of React.js for building dynamic and responsive web applications</p>
+          <p>Familiar with Flutter and Dart for cross-platform mobile app development.</p>
+          <p>Comfortable working with various front-end and back-end frameworks.</p>
 
         </div>
 
         <div className="flex flex-col  p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
           <h1 className="font-bold text-xl">Database Management</h1> <br/>
-          <p>•Hands-on experience with MongoDB and MySQL.</p>
-          <p>•Database design and optimization for efficient data storage and retrieval.</p>
+          <p>Hands-on experience with MongoDB and MySQL.</p>
+          <p>Database design and optimization for efficient data storage and retrieval.</p>
         </div>
       </div>
     </div>
