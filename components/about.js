@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+
 import {
   FaFacebook,
   FaGithub,
@@ -10,12 +12,15 @@ import {
 import profileImage from "../public/images/me.jpeg";
 
 const About = () => {
+
   return (
-    <div className="lg:flex lg:pl-40  lg:pr-40 pr-7 pl-7 pt-10" id="about">
+    <div id="about" className="lg:flex lg:pl-40  lg:pr-40 pr-7 pl-7 pt-10">
       <div className=" text-gray-900 lg:w-3/4 ">
-        <h1 className="text-3xl font-bold">
+       <div className=" ">
+       <h1 className="text-3xl font-bold">
           <span className="underline">A</span>bout
         </h1>
+       </div>
         <br />
         <p>
           My name is Keneith Salnave Romain, a Software Developer, technology

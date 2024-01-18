@@ -4,18 +4,21 @@ import BackImage from "../public/images/bannerContact.jpeg";
 
 const Contact = () => {
   return (
-    <div
-      className="h-[750px] lg:h-[550px] max-w-screen-2xl mx-auto flex flex-col  p-7 lg:p-40 lg:pt-5 bg-center bg-cover bg-no-repeat"
+    <div id="contact"
+      className="h-[750px] lg:h-[550px] max-w-screen-2xl mx-auto flex flex-col  p-7 lg:p-40 lg:pt-5 bg-center bg-cover bg-no-repeat "
       style={{ backgroundImage: `url(${BackImage.src})` }}
     >
       <div className="max-w-screen">
-        <div className="text-3xl font-bold text-white ">
-          <span className="underline">C</span>ontact
+      <div className="container mx-auto  text-white">
+      <div className="text-3xl font-bold">
+        <span className="underline">C</span>ontact
+      </div>
+      <br />
+        <div className="text-xl">
+         
+          Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
         </div>
-        <div className="text-white text-2xl">
-          Feel free to Contact me by submitting the form below and I will get
-          back to you as soon as possible
-        </div>
+      </div>
         <br />
         <div className="  h-[300px] w-auto rounded-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
