@@ -21,7 +21,7 @@ const Services = () => {
         </div>
 
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
-        <h1 className="font-bold text-xl" >App Development</h1> make things simpler with an Android or iOS mobile app.
+        <h1 className="font-bold text-xl" >App Development</h1> Make things simpler with an Android or iOS mobile app.
           Stay connected to your activities wherever you are.
         </div>
 
