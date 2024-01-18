@@ -1,6 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 import profileImage from "../public/images/me.jpeg";
 
 const About = () => {

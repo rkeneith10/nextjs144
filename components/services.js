@@ -16,18 +16,22 @@ const Services = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
-          <h1 className="font-bold text-xl">Web Development</h1> Building and maintenance of website for a better
-          looking on the web.
+          <h1 className="font-bold text-xl">Web Development</h1> Enhance your
+          online presence with our website construction and maintenance
+          services, ensuring a visually appealing and polished appearance on the
+          web
         </div>
 
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
-        <h1 className="font-bold text-xl" >App Development</h1> Make things simpler with an Android or iOS mobile app.
-          Stay connected to your activities wherever you are.
+          <h1 className="font-bold text-xl">App Development</h1> Simplify your
+          life with our user-friendly Android or iOS mobile app. Seamlessly stay
+          connected to your tasks and activities, no matter where you are.
         </div>
 
         <div className="flex flex-col border border-solid border-gray-500 p-4 h-800">
-        <h1 className="font-bold text-xl">Reponsive Design</h1> We create design that automatically adapts the
-          screen of any devices such as PC tablet or smartphone.
+          <h1 className="font-bold text-xl">Reponsive Design</h1> We craft
+          designs that effortlessly adjust to the screens of various devices,
+          including PCs, tablets, and smartphones
         </div>
       </div>
     </div>
