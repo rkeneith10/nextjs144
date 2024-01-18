@@ -61,6 +61,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
+              placeholder="Enter your Message"
               rows="8"
               className="border rounded-md w-full p-2 resize-none"
             ></textarea>
