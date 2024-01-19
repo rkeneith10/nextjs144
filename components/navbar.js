@@ -4,8 +4,6 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
-import logo from "../public/images/logo.PNG"
-import Image from "next/image";
 import {Link } from "react-scroll";
 // import { ScrollinProvider, ScrollinTarget } from 'react-scrollin';
 
@@ -44,7 +42,7 @@ export default function Navbar() {
     <Disclosure
       as="nav"
       className={`${
-        header ? "bg-gray-800 fixed w-[100%]" : "bg-[transparent]" 
+        header ? "bg-gray-800 fixed w-[100%] z-10" : "bg-[transparent]" 
       } `}
     >
       {({ open }) => (
@@ -83,9 +81,9 @@ export default function Navbar() {
                         duration={500}
                         className={classNames(
                           header
-                            ? " text-white font-semibold hover:bg-white hover:text-gray-900 cursor-pointer"
+                            ? " text-white font-semibold hover:bg-white hover:text-gray-900 "
                             : "text-gray-900 hover:bg-gray-900 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          "rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
