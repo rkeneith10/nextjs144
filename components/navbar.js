@@ -76,18 +76,18 @@ export default function navbar() {
           </li>
         </ul>
 
-        <div onClick={handleSmalleNavigation} className="flex md:hidden">
+        <div onClick={handleSmalleNavigation} className="flex md:hidden border border-solid border-gray-900">
           {menuIcon ? (
             <XMarkIcon
               className={`${
-                header ? "text-white" : "text-gray-900"
-              }  h-6 w-6 `}
+                header ? "text-white border border-solid border-white " : "text-gray-900 border border-solid border-gray-900"
+              }  h-8 w-8 `}
             />
           ) : (
             <Bars3Icon
               className={`${
-                header ? "text-white" : "text-gray-900"
-              }  h-6 w-6 `}
+                header ? "text-white border border-solid border-white" : "text-gray-900 border border-solid border-gray-900"
+              }  h-8 w-8 `}
             />
           )}
         </div>
