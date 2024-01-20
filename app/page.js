@@ -8,13 +8,13 @@ import Contact from "../components/contact";
 import Skills from "@/components/skilss";
 import WhatsAppButton from "@/components/whatsAppButton";
 import Footer from "@/components/footer";
-import Navbar2 from "@/components/navbar2";
+
 
 export default function Home() {
   return (
     <>
       <div className="w-full bg-center">
-        <Navbar2 />
+        <Navbar />
         <Banner />
         <About />
         <Services />

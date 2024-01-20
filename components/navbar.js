@@ -1,27 +1,19 @@
 "use client";
-
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import React from "react";
+import { Link } from "react-scroll/modules";
 import { useState, useEffect } from "react";
-import {Link } from "react-scroll";
-// import { ScrollinProvider, ScrollinTarget } from 'react-scrollin';
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import logo from "../public/images/logo.PNG";
+import theWhiteLogo from "../public/images/logochange.png";
 
-
-const navigation = [
-  { name: "HOME", href: "/", current: false },
-  { name: "ABOUT", href: "about", current: false },
-  { name: "SERVICES", href: "services", current: false },
-  { name: "SKILLS", href: "skills", current: false },
-  { name: "CONTACT", href: "contact", current: false },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function Navbar() {
+export default function navbar() {
+  const [menuIcon, setIcon] = useState(false);
   const [header, setHeader] = useState(false);
+
+  const handleSmalleNavigation = () => {
+    setIcon(!menuIcon);
+  };
 
   const scrollHeader = () => {
     if (window.scrollY >= 20) {
@@ -39,111 +31,124 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <Disclosure
-      as="nav"
+    <header
       className={`${
-        header ? "bg-gray-800 fixed w-[100%] z-10" : "bg-[transparent]" 
-      } `}
+        header
+          ? "bg-gray-800 fixed w-[100%] z-10 text-white"
+          : "bg-[transparent] text-gray-900"
+      }   w-full ease-in duration-300 `}
     >
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8  ">
-            <div className="relative flex h-16 items-center justify-between fixed ">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className= {`${header ? "text-white hover:bg-white hover:text-gray-900": "text-gray-900 hover:bg-gray-900 hover:text-white"} relative inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white` } >
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div
-                  className={`${
-                    header ? "text-xl text-white" : "text-xl text-gray-900"
-                  } flex flex-shrink-0 items-center`}
-                >
-                  {/* <Image src={logo} className="h-14 w-auto"/> */}
-                
-                </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4 itemsc">
-                    {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        smooth={true}
-                        offset={-100}
-                        duration={500}
-                        className={classNames(
-                          header
-                            ? " text-white font-semibold hover:bg-white hover:text-gray-900 "
-                            : "text-gray-900 hover:bg-gray-900 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-             
-            </div>
-          </div>
-
-          {/* <ScrollinProvider>
-          <Disclosure.Panel className="sm:hidden">
-        <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
-            <ScrollinTarget key={item.name} to={item.href} offset={-50} duration={500}>
-              <Disclosure.Button
-                as="a"
-                href={item.href}
-                className={classNames(
-                  "block rounded-md px-3 py-2 text-base font-medium transition-colors duration-300",
-                  header
-                    ? "text-white hover:bg-white hover:text-gray-900"
-                    : "text-gray-900 hover:bg-gray-900 hover:text-white",
-                  { 'your-active-class': item.current },
-                )}
-                style={item.current ? activeLinkStyles : {}}
-              >
-                {item.name}
-              </Disclosure.Button>
-            </ScrollinTarget>
-          ))}
+      <nav className="max-w-[1366px] h-[100px] flex justify-between p-4 items-center">
+        <div className="">
+          {header ? (
+            <Image src={theWhiteLogo} width={130} height={100} />
+          ) : (
+            <Image src={logo} width={130} height={100} />
+          )}
         </div>
-      </Disclosure.Panel>
-          </ScrollinProvider> */}
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  to={item.href}
-                  className={classNames(
-                    header
-                      ? "text-white hover:bg-white hover:text-gray-900"
-                      : "text-gray-900 hover:bg-gray-900 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name} 
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+        <ul className="hidden md:flex uppercase font-semibold text-1xl ">
+          <li className="mr-4 lg:mr-8 cursor-pointer">
+            <Link to="top" smooth={true} offset={-180} duration={500}>
+              home
+            </Link>
+          </li>
+          <li className="mr-4 lg:mr-8 cursor-pointer">
+            <Link to="about" smooth={true} offset={-200} duration={500}>
+              about
+            </Link>
+          </li>
+          <li className="mr-4 lg:mr-8 cursor-pointer">
+            <Link to="services" smooth={true} offset={-200} duration={500}>
+              services
+            </Link>
+          </li>
+          <li className="mr-4 lg:mr-8 cursor-pointer">
+            <Link to="skills" smooth={true} offset={-180} duration={500}>
+              skills
+            </Link>
+          </li>
+
+          <li className="mr-4 lg:mr-8 cursor-pointer">
+            <Link to="contact" smooth={true} offset={-180} duration={500}>
+              contact
+            </Link>
+          </li>
+        </ul>
+
+        <div onClick={handleSmalleNavigation} className="flex md:hidden">
+          {menuIcon ? (
+            <XMarkIcon
+              className={`${
+                header ? "text-white" : "text-gray-900"
+              }  h-6 w-6 `}
+            />
+          ) : (
+            <Bars3Icon
+              className={`${
+                header ? "text-white" : "text-gray-900"
+              }  h-6 w-6 `}
+            />
+          )}
+        </div>
+
+        <div
+          className={
+            menuIcon
+              ? "md:hidden absolute top-[100px] right-0 bottom-0 left-0 flex justify-center text-center items-center w-full h-screen bg-gray-900 text-white ease-in duration-300"
+              : "md:hidden absolute top-[100px] right-0 bottom-0 left-[-100%] flex justify-center text-center items-center w-full h-screen bg-gray-900 text-white ease-in duration-300"
+          }
+        >
+          <div className="w-full" >
+            <ul className="uppercase font-bold text-2xl ">
+              <li
+                
+                className="py-5 cursor-pointer"
+              >
+                <Link to="top" smooth={true} offset={-200} duration={500} onClick={handleSmalleNavigation}>
+                  home
+                </Link>
+              </li>
+
+              <li
+                
+                className="py-5 cursor-pointer"
+              >
+                <Link to="about" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+                  about
+                </Link>
+              </li>
+
+              <li
+                
+                className="py-5 cursor-pointer"
+              >
+                <Link to="services" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+                  services
+                </Link>
+              </li>
+
+              <li
+                
+                className="py-5 cursor-pointer"
+              >
+                <Link to="skills" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+                  skills
+                </Link>
+              </li>
+
+              <li
+               
+                className="py-5 cursor-pointer"
+              >
+                <Link to="contact" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+                  contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
