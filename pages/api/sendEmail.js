@@ -6,17 +6,18 @@ export default async (req, res) => {
 
     // Configuration du transporteur Nodemailer
     const transporter = nodemailer.createTransport({
-      host: smtp.mail.icloud.com,
-      port: 587,
+      host: 'mail.xbooksconnect.com',
+      port: 465,
+      secure: true,
       auth: {
-        user: "rkeneith@icloud.com",
-        pass: "RSKenneth1210",
+        user: "service@xbooksconnect.com",
+        pass: "SERVICE@xbooks2023",
       },
     });
 
     // Options du message
     const mailOptions = {
-      from: email,
+      from: "rkeneith10@yahoo.com",
       to: 'rkeneith@icloud.com', // Remplacez par l'adresse e-mail de votre destinataire
       subject: 'Nouveau message de contact',
       text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`,
@@ -25,6 +26,7 @@ export default async (req, res) => {
     try {
       // Envoi du message
       await transporter.sendMail(mailOptions);
+      console.log("Good")
       res.status(200).send('Message envoyé avec succès!');
     } catch (error) {
       console.error(error);
