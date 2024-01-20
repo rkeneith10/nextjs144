@@ -6,7 +6,7 @@ export default async (req, res) => {
 
     // Configuration du transporteur Nodemailer
     const transporter = nodemailer.createTransport({
-      host: mail.icloud.com,
+      host: smtp.mail.icloud.com,
       port: 587,
       auth: {
         user: "rkeneith@icloud.com",
