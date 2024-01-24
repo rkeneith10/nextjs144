@@ -18,7 +18,7 @@ export default async (req, res) => {
     // Options du message
     const mailOptions = {
       from: email,
-      to: 'rkeneith@icloud.com', // Remplacez par l'adresse e-mail de votre destinataire
+      to: 'rkeneith10@yahoo.com', // Remplacez par l'adresse e-mail de votre destinataire
       subject: 'Nouveau message de contact',
       text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };

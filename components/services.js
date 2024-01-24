@@ -25,21 +25,21 @@ const Services = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
         <div className="flex flex-col p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
         <span><FaGlobe size={30}/></span> <h1 className="font-bold text-xl">Web Development</h1> <br />
-          Enhance your online presence with our website construction and
+          Enhance your online presence with my website construction and
           maintenance services, ensuring a visually appealing and polished
           appearance on the web
         </div>
 
         <div className="flex flex-col p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
         <span><FaAppStore size={30}/></span><h1 className="font-bold text-xl">App Development</h1> <br />
-          Simplify your life with our user-friendly Android or iOS mobile app.
+          Simplify your life with my user-friendly Android or iOS mobile app.
           Seamlessly stay connected to your tasks and activities, no matter
           where you are.
         </div>
 
         <div className="flex flex-col p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
         <span><FaMobileAlt size={30}/></span> <h1 className="font-bold text-xl">Reponsive Design</h1>
-          <br /> We craft designs that effortlessly adjust to the screens of
+          <br /> I craft designs that effortlessly adjust to the screens of
           various devices, including PCs, tablets, and smartphones
         </div>
       </div>

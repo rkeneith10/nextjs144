@@ -36,7 +36,7 @@ export default function navbar() {
         header
           ? "bg-gray-800 fixed w-[100%] z-10 text-white"
           : "bg-[transparent] text-gray-900"
-      }   w-full ease-in duration-300 `}
+      }   w-full transition-colors ease-in-out duration-300 `}
     >
       <nav className="max-w-[1366px] h-[100px] flex justify-between p-4 items-center">
         <div className="">
