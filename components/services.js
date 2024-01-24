@@ -14,7 +14,7 @@ const Services = () => {
           <span className="underline">S</span>ervices
         </div><br/>
         <div className="">
-          Elevate your online presence with our comprehensive services,
+          Elevate your online presence with my comprehensive services,
           specializing in expert web development, cutting-edge mobile app
           creation, and meticulous attention to responsive design for a seamless
           user experience across all devices.

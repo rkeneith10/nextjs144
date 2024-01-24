@@ -26,9 +26,9 @@ const Skills = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
         <div className="flex flex-col  p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
         <span><FaFileCode size={30}/></span> <h1 className="font-bold text-xl">Programming Languages</h1>
-          <br /> <p>Proficient in HTML, CSS, JavaScript, PHP, and Dart.”</p>
-          <p>Experience with server-side scripting using Node.js and PHP.”</p>
-          <p>Solid understanding of object-oriented programming concepts.”</p>
+          <br /> <p>Proficient in HTML, CSS, JavaScript, PHP, and Dart.</p>
+          <p>Experience with server-side scripting using Node.js and PHP.</p>
+          <p>Solid understanding of object-oriented programming concepts.</p>
         </div>
 
         <div className="flex flex-col p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">

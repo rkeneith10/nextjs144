@@ -4,13 +4,21 @@ import { useState, useEffect } from "react";
 import BackImage from "../public/images/bannerContact.jpeg";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+
+  const [formData,setFormData]=useState({
+    userName:"",
+    email:"",
+    message:""
+  });
+  const handleChange=(e)=>{
+    const {name,value}=e.target;
+    setFormData({...formData,[name]:value})
+  }
+ 
   const [erreur, setErreur] = useState("");
   const [good, setGood] = useState("");
   const [loading, setLoading] = useState(false);
-  //const [showGood, setShowGood] = useState(true);
+  
 
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -29,11 +37,11 @@ const Contact = () => {
     if (loading) return;
 
     try {
-      setLoading(true); // Affichez le loader au début de la fonction
+      setLoading(true); 
 
-      if (name.trim() === "" && email.trim() === "" && message.trim() === "") {
+      if (formData.userName.trim() === "" && formData.email.trim() === "" && formData.message.trim() === "") {
         setErreur("All fields must be completed");
-      } else if (!regexEmail.test(email)) {
+      } else if (!regexEmail.test(formData.email)) {
         setErreur("This email is invalid");
       } else {
         const response = await fetch("/api/sendEmail", {
@@ -42,17 +50,21 @@ const Contact = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name: name,
-            email: email,
-            message: message,
+            name: formData.userName,
+            email: formData.email,
+            message: formData.message,
           }),
         });
 
         if (response.ok) {
           setGood("Your Email was sent successfully");
-          setEmail("");
-          setMessage("");
-          setName("");
+         
+        
+          setFormData({
+            userName:"",
+            email:"",
+            message:""
+          })
         } else {
           setErreur("Failed to send email");
         }
@@ -60,7 +72,7 @@ const Contact = () => {
     } catch (error) {
       setErreur("An error occurred while sending the email");
     } finally {
-      setLoading(false); // Masquez le loader, que la fonction ait réussi ou échoué
+      setLoading(false); 
     }
   };
 
@@ -116,12 +128,12 @@ const Contact = () => {
                 Name
               </label>
               <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={formData.userName}
+                onChange={handleChange}
                 type="text"
                 placeholder="Enter your Name"
-                id="nom"
-                name="nom"
+                id="userName"
+                name="userName"
                 className="border rounded-md w-full p-2"
               />
             </div>
@@ -134,8 +146,8 @@ const Contact = () => {
                 E-mail
               </label>
               <input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={handleChange}
                 type="email"
                 placeholder="Enter your Email"
                 id="email"
@@ -152,8 +164,8 @@ const Contact = () => {
               Message
             </label>
             <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={formData.message}
+              onChange={handleChange}
               id="message"
               name="message"
               placeholder="Enter your Message"
