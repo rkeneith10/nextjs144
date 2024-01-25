@@ -34,7 +34,7 @@ export default function navbar() {
     <header
       className={`${
         header
-          ? "bg-gray-800 fixed w-[100%] z-10 text-white"
+          ? "bg-gray-900 fixed w-[100%] z-10 text-white"
           : "bg-[transparent] text-gray-900"
       }   w-full transition-colors ease-in-out duration-300 `}
     >
