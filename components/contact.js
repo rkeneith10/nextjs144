@@ -1,24 +1,21 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import BackImage from "../public/images/bannerContact.jpeg";
 
 const Contact = () => {
-
-  const [formData,setFormData]=useState({
-    userName:"",
-    email:"",
-    message:""
+  const [formData, setFormData] = useState({
+    userName: "",
+    email: "",
+    message: "",
   });
-  const handleChange=(e)=>{
-    const {name,value}=e.target;
-    setFormData({...formData,[name]:value})
-  }
- 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const [erreur, setErreur] = useState("");
   const [good, setGood] = useState("");
   const [loading, setLoading] = useState(false);
-  
 
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -37,9 +34,13 @@ const Contact = () => {
     if (loading) return;
 
     try {
-      setLoading(true); 
+      setLoading(true);
 
-      if (formData.userName.trim() === "" && formData.email.trim() === "" && formData.message.trim() === "") {
+      if (
+        formData.userName.trim() === "" &&
+        formData.email.trim() === "" &&
+        formData.message.trim() === ""
+      ) {
         setErreur("All fields must be completed");
       } else if (!regexEmail.test(formData.email)) {
         setErreur("This email is invalid");
@@ -58,13 +59,12 @@ const Contact = () => {
 
         if (response.ok) {
           setGood("Your Email was sent successfully");
-         
-        
+
           setFormData({
-            userName:"",
-            email:"",
-            message:""
-          })
+            userName: "",
+            email: "",
+            message: "",
+          });
         } else {
           setErreur("Failed to send email");
         }
@@ -72,11 +72,10 @@ const Contact = () => {
     } catch (error) {
       setErreur("An error occurred while sending the email");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
-  
   return (
     <div
       id="contact"
@@ -99,9 +98,7 @@ const Contact = () => {
               role="alert"
             >
               <span class="block sm:inline">{erreur}.</span>
-              <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-               
-              </span>
+              <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
             </div>
           )}
 
@@ -111,9 +108,7 @@ const Contact = () => {
               role="alert"
             >
               <span class="block sm:inline">{good}.</span>
-              <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-              
-              </span>
+              <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
             </div>
           )}
         </div>

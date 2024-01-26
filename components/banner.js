@@ -1,10 +1,10 @@
-import React from "react";
 import BackImage1 from "../public/images/banner.PNG";
 
 const Banner = () => {
   return (
     <>
-      <div id="top"
+      <div
+        id="top"
         className="h-[550px] max-w-screen-2xl mx-auto flex flex-col justify-center p-7 lg:p-40  bg-center bg-cover bg-no-repeat "
         style={{ backgroundImage: `url(${BackImage1.src})` }}
       >

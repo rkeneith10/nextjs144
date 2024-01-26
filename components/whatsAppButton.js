@@ -1,6 +1,5 @@
 // Importez le style Tailwind pour le bouton WhatsApp
-import React from "react";
-import { FaWhatsapp } from 'react-icons/fa6'
+import { FaWhatsapp } from "react-icons/fa6";
 
 const WhatsAppButton = () => {
   return (
@@ -10,7 +9,7 @@ const WhatsAppButton = () => {
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4  shadow-md hover:bg-green-600 rounded-md"
     >
-      <FaWhatsapp color='white' className='w-7 h-7 md:w-10 md:h-10' />
+      <FaWhatsapp color="white" className="w-7 h-7 md:w-10 md:h-10" />
     </a>
   );
 };

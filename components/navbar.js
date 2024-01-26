@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
-import { Link } from "react-scroll/modules";
-import { useState, useEffect } from "react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Link } from "react-scroll/modules";
 import logo from "../public/images/logo.PNG";
 import theWhiteLogo from "../public/images/logochange.png";
 
@@ -76,17 +75,24 @@ export default function navbar() {
           </li>
         </ul>
 
-        <div onClick={handleSmalleNavigation} className="flex md:hidden border border-solid border-gray-900">
+        <div
+          onClick={handleSmalleNavigation}
+          className="flex md:hidden border border-solid border-gray-900"
+        >
           {menuIcon ? (
             <XMarkIcon
               className={`${
-                header ? "text-white border border-solid border-white " : "text-gray-900 border border-solid border-gray-900"
+                header
+                  ? "text-white border border-solid border-white "
+                  : "text-gray-900 border border-solid border-gray-900"
               }  h-8 w-8 `}
             />
           ) : (
             <Bars3Icon
               className={`${
-                header ? "text-white border border-solid border-white" : "text-gray-900 border border-solid border-gray-900"
+                header
+                  ? "text-white border border-solid border-white"
+                  : "text-gray-900 border border-solid border-gray-900"
               }  h-8 w-8 `}
             />
           )}
@@ -99,49 +105,64 @@ export default function navbar() {
               : "md:hidden absolute top-[100px] right-0 bottom-0 left-[-100%] flex justify-center text-center items-center w-full h-screen bg-gray-900 text-white ease-in duration-300"
           }
         >
-          <div className="w-full" >
+          <div className="w-full">
             <ul className="uppercase font-bold text-2xl ">
-              <li
-                
-                className="py-5 cursor-pointer"
-              >
-                <Link to="top" smooth={true} offset={-200} duration={500} onClick={handleSmalleNavigation}>
+              <li className="py-5 cursor-pointer">
+                <Link
+                  to="top"
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  onClick={handleSmalleNavigation}
+                >
                   home
                 </Link>
               </li>
 
-              <li
-                
-                className="py-5 cursor-pointer"
-              >
-                <Link to="about" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+              <li className="py-5 cursor-pointer">
+                <Link
+                  to="about"
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  onClick={handleSmalleNavigation}
+                >
                   about
                 </Link>
               </li>
 
-              <li
-                
-                className="py-5 cursor-pointer"
-              >
-                <Link to="services" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+              <li className="py-5 cursor-pointer">
+                <Link
+                  to="services"
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  onClick={handleSmalleNavigation}
+                >
                   services
                 </Link>
               </li>
 
-              <li
-                
-                className="py-5 cursor-pointer"
-              >
-                <Link to="skills" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+              <li className="py-5 cursor-pointer">
+                <Link
+                  to="skills"
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  onClick={handleSmalleNavigation}
+                >
                   skills
                 </Link>
               </li>
 
-              <li
-               
-                className="py-5 cursor-pointer"
-              >
-                <Link to="contact" smooth={true} offset={-200} duration={500}  onClick={handleSmalleNavigation}>
+              <li className="py-5 cursor-pointer">
+                <Link
+                  to="contact"
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  onClick={handleSmalleNavigation}
+                >
                   contact
                 </Link>
               </li>
