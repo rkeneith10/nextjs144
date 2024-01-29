@@ -37,8 +37,8 @@ const Contact = () => {
       setLoading(true);
 
       if (
-        formData.userName.trim() === "" &&
-        formData.email.trim() === "" &&
+        formData.userName.trim() === "" ||
+        formData.email.trim() === "" ||
         formData.message.trim() === ""
       ) {
         setErreur("All fields must be completed");
