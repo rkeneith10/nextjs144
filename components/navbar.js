@@ -69,6 +69,12 @@ export default function navbar() {
           </li>
 
           <li className="mr-4 lg:mr-8 cursor-pointer">
+            <Link to="portfolio" smooth={true} offset={-180} duration={500}>
+              portfolio
+            </Link>
+          </li>
+
+          <li className="mr-4 lg:mr-8 cursor-pointer">
             <Link to="contact" smooth={true} offset={-180} duration={500}>
               contact
             </Link>
@@ -152,6 +158,18 @@ export default function navbar() {
                   onClick={handleSmalleNavigation}
                 >
                   skills
+                </Link>
+              </li>
+
+              <li className="py-5 cursor-pointer">
+                <Link
+                  to="portfolio"
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  onClick={handleSmalleNavigation}
+                >
+                  portfolio
                 </Link>
               </li>
 
