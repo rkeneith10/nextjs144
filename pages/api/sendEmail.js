@@ -5,20 +5,27 @@ export default async (req, res) => {
     const { name, email, message } = req.body;
 
     // Configuration du transporteur Nodemailer
+    // Utilisation des variables d'environnement pour la sécurité
     const transporter = nodemailer.createTransport({
-      host: "mail.xbooksconnect.com",
-      port: 465,
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT,
       secure: true,
       auth: {
-        user: "service@xbooksconnect.com",
-        pass: "SERVICE@xbooks2023",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
+    // Validation basique côté serveur
+    if (!name || !email || !message) {
+      return res.status(400).send("Tous les champs sont requis.");
+    }
+
     // Options du message
     const mailOptions = {
-      from: email,
-      to: "rkeneith10@yahoo.com", // Remplacez par l'adresse e-mail de votre destinataire
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Utiliser l'email du service pour l'envoi
+      replyTo: email, // Ajouter l'email de l'utilisateur dans le champ "reply-to"
+      to: process.env.EMAIL_TO, // L'adresse de destination doit aussi être une variable d'environnement
       subject: "Nouveau message de contact",
       text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
@@ -26,14 +33,15 @@ export default async (req, res) => {
     try {
       // Envoi du message
       await transporter.sendMail(mailOptions);
-      console.log("Good");
+      console.log("Email envoyé avec succès");
       res.status(200).send("Message envoyé avec succès!");
     } catch (error) {
       console.error(error);
       res.status(500).send("Erreur lors de l'envoi du message.");
     }
   } else {
-    res.status(405).end();
+    res.setHeader("Allow", ["POST"]);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
 

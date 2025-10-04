@@ -6,6 +6,7 @@ import About from "../components/about";
 import Services from "../components/services";
 import Contact from "../components/contact";
 import Skills from "@/components/skilss";
+import Portfolio from "../components/portfolio"; 
 import WhatsAppButton from "@/components/whatsAppButton";
 import Footer from "@/components/footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <About />
         <Services />
         <Skills/>
+        <Portfolio />
         <Contact/>
         <Footer/>
         <WhatsAppButton/>
