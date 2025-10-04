@@ -29,7 +29,7 @@ const Skills = () => {
           </span>{" "}
           <h1 className="font-bold text-xl">Programming Languages</h1>
           <br /> <p>Proficient in HTML, CSS, JavaScript, PHP, and Dart.</p>
-          <p>Experience with server-side scripting using Node.js and PHP.</p>
+          <p>Experience with server-side scripting using Node.js, Python and PHP.</p>
           <p>Solid understanding of object-oriented programming concepts.</p>
         </div>
 
@@ -39,7 +39,7 @@ const Skills = () => {
           </span>
           <h1 className="font-bold text-xl">Frameworks and Libraries</h1> <br />
           <p>
-            Extensive knowledge of React.js for building dynamic and responsive
+            Extensive knowledge of NextJS for building dynamic and responsive
             web applications
           </p>
           <p>
@@ -56,7 +56,7 @@ const Skills = () => {
             <FaDatabase size={30} />
           </span>{" "}
           <h1 className="font-bold text-xl">Database Management</h1> <br />
-          <p>Hands-on experience with MongoDB and MySQL.</p>
+          <p>Hands-on experience with MongoDB , PostgreSQL and MySQL.</p>
           <p>
             Database design and optimization for efficient data storage and
             retrieval.
