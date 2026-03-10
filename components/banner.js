@@ -26,7 +26,7 @@ const Banner = () => {
             I build cool things for the web.
           </h2>
           <p className="text-slate-600 text-lg max-w-xl font-sans leading-relaxed mb-8">
-            Welcome to my portfolio, a space where I channel my passion for the tech-oriented world, particularly web and mobile development. Coding is more than writing logic—it's crafting digital experiences that bring joy and solve real problems.
+            Welcome to my portfolio, a space where I channel my passion for the tech-oriented world, particularly web and mobile development. Coding is more than writing logic, it's crafting digital experiences that bring joy and solve real problems.
           </p>
           
           <div className="flex gap-4">
