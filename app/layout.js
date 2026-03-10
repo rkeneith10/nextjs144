@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata = {
-  title: "Keneith Salnave Romain | Developer",
+  title: "Keneith-Salnave Romain | Developer",
   description: "Portfolio of Keneith Salnave Romain, Fullstack Developer",
 };
 
