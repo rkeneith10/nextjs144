@@ -20,7 +20,7 @@ const Banner = () => {
         <div className="flex-1 w-full flex flex-col items-start justify-center animate-fade-in-up">
           <p className="text-cyan-600 font-heading font-semibold tracking-widest uppercase mb-4">Hello, I am</p>
           <h1 className="text-5xl lg:text-7xl font-heading font-bold text-slate-900 mb-4 leading-tight">
-            Keneith Salnave <br/> Romain
+            Keneith-Salnave Romain
           </h1>
           <h2 className="text-2xl lg:text-4xl font-sans font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-600 mb-6">
             I build cool things for the web.

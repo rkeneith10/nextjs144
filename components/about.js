@@ -19,7 +19,7 @@ const About = () => {
           
           <div className="space-y-6 text-lg font-sans leading-relaxed text-slate-600">
             <p>
-              My name is Keneith Salnave Romain, a Software Developer and technology enthusiast with over five years of experience in web and mobile development. While my focus has primarily been on backend architecture, I've recently dedicated a significant amount of time to mastering modern frontend technologies to become a proficient fullstack developer.
+              My name is Keneith-Salnave Romain, a Software Developer and technology enthusiast with over five years of experience in web and mobile development. While my focus has primarily been on backend architecture, I've recently dedicated a significant amount of time to mastering modern frontend technologies to become a proficient fullstack developer.
             </p>
             <p>
               Aside from my love for coding, I have a passion for music, movies, and TV shows. I'm always eager to explore new technologies and engage in creative development. Thank you for visiting my portfolio!

@@ -7,7 +7,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata = {
   title: "Keneith-Salnave Romain | Developer",
-  description: "Portfolio of Keneith Salnave Romain, Fullstack Developer",
+  description: "Portfolio of Keneith-Salnave Romain, Fullstack Developer",
 };
 
 export default function RootLayout({ children }) {
