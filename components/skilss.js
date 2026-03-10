@@ -2,68 +2,78 @@
 import { FaCube, FaDatabase, FaFileCode } from "react-icons/fa";
 
 const Skills = () => {
+  const skillsData = [
+    {
+      title: "Programming Languages",
+      icon: <FaFileCode size={30} className="text-cyan-500" />,
+      items: [
+        "Proficient in HTML, CSS, JavaScript, PHP, and Dart.",
+        "Experience with server-side scripting using Node.js, Python and PHP.",
+        "Solid understanding of object-oriented programming concepts."
+      ]
+    },
+    {
+      title: "Frameworks & Libraries",
+      icon: <FaCube size={30} className="text-indigo-500" />,
+      items: [
+        "Extensive knowledge of Next.js for building dynamic web applications.",
+        "Familiar with Flutter and Dart for cross-platform app development.",
+        "Comfortable working with various front-end and back-end frameworks."
+      ]
+    },
+    {
+      title: "Database Management",
+      icon: <FaDatabase size={30} className="text-blue-500" />,
+      items: [
+        "Hands-on experience with MongoDB, PostgreSQL and MySQL.",
+        "Database design and optimization for efficient data storage."
+      ]
+    }
+  ];
+
   return (
-    <div
-      className="lg:flex flex-col lg:pl-40  pb-10 lg:pr-40 pr-7 pl-7 pt-10 text-gray-900 "
-      id="skills"
-    >
-      <div className="container mx-auto ">
-        <div className="text-3xl font-bold">
-          <span className="underline">S</span>kills
-        </div>
-        <br />
-        <p className="">
-          {" "}
-          In recent years, I've honed my skills in web and mobile app
-          development, harnessing the latest technologies to craft innovative
-          and impactful digital experiences. Explore below to discover the tools
-          and frameworks that drive my ability to create exceptional
-          applications.
-        </p>
-      </div>
+    <section id="skills" className="py-24 bg-white border-t border-b border-slate-100 relative overflow-hidden">
+      {/* Background ambient light */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-indigo-100/50 blur-[120px] rounded-full pointer-events-none"></div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
-        <div className="flex flex-col  p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
-          <span>
-            <FaFileCode size={30} />
-          </span>{" "}
-          <h1 className="font-bold text-xl">Programming Languages</h1>
-          <br /> <p>Proficient in HTML, CSS, JavaScript, PHP, and Dart.</p>
-          <p>Experience with server-side scripting using Node.js, Python and PHP.</p>
-          <p>Solid understanding of object-oriented programming concepts.</p>
-        </div>
-
-        <div className="flex flex-col p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
-          <span>
-            <FaCube size={30} />
-          </span>
-          <h1 className="font-bold text-xl">Frameworks and Libraries</h1> <br />
-          <p>
-            Extensive knowledge of NextJS for building dynamic and responsive
-            web applications
-          </p>
-          <p>
-            Familiar with Flutter and Dart for cross-platform mobile app
-            development.
-          </p>
-          <p>
-            Comfortable working with various front-end and back-end frameworks.
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl font-heading font-bold text-slate-900 mb-6 relative inline-block">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-600">My</span> Skills
+            <div className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-full"></div>
+          </h2>
+          <p className="text-lg text-slate-600 font-sans">
+            In recent years, I've honed my skills in web and mobile app development, harnessing the latest technologies to craft innovative and impactful digital experiences.
           </p>
         </div>
 
-        <div className="flex flex-col  p-4 h-800 bg-white hover:bg-gray-700 hover:text-white transition-transform transform hover:-translate-x-1 rounded-ms shadow-lg">
-          <span>
-            <FaDatabase size={30} />
-          </span>{" "}
-          <h1 className="font-bold text-xl">Database Management</h1> <br />
-          <p>Hands-on experience with MongoDB , PostgreSQL and MySQL.</p>
-          <p>
-            Database design and optimization for efficient data storage and
-            retrieval.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {skillsData.map((skill, i) => (
+            <div key={i} className="group relative">
+              <div className="absolute inset-0 bg-white rounded-2xl transform transition-transform duration-500 group-hover:-translate-y-2 shadow-xl border border-slate-100"></div>
+              
+              <div className="relative p-8 h-full flex flex-col transform transition-transform duration-500 group-hover:-translate-y-2">
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-100">
+                  <div className="w-14 h-14 rounded-xl bg-slate-50 flex flex-shrink-0 items-center justify-center shadow-sm border border-slate-100 group-hover:shadow-cyan-500/20 transition-all">
+                    {skill.icon}
+                  </div>
+                  <h3 className="text-xl font-heading font-bold text-slate-800">{skill.title}</h3>
+                </div>
+                
+                <ul className="space-y-4 flex-grow">
+                  {skill.items.map((item, idx) => (
+                    <li key={idx} className="flex gap-3 text-slate-600 text-sm md:text-base">
+                      <span className="text-cyan-500 mt-1">▹</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

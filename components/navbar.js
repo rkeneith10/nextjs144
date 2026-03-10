@@ -3,10 +3,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll/modules";
-import logo from "../public/images/logo.PNG";
-import theWhiteLogo from "../public/images/logochange.png";
+import logo from "../public/images/logo.png";
 
-export default function navbar() {
+export default function Navbar() {
   const [menuIcon, setIcon] = useState(false);
   const [header, setHeader] = useState(false);
 
@@ -24,168 +23,84 @@ export default function navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", scrollHeader);
-
     return () => {
-      window.addEventListener("scroll", scrollHeader);
+      window.removeEventListener("scroll", scrollHeader);
     };
   }, []);
+
+  const navLinks = [
+    { name: "Home", to: "top", offset: -180 },
+    { name: "About", to: "about", offset: -200 },
+    { name: "Services", to: "services", offset: -200 },
+    { name: "Skills", to: "skills", offset: -180 },
+    { name: "Portfolio", to: "portfolio", offset: -180 },
+    { name: "Contact", to: "contact", offset: -180 },
+  ];
+
   return (
     <header
-      className={`${
+      className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${
         header
-          ? "bg-gray-900 fixed w-[100%] z-10 text-white"
-          : "bg-[transparent] text-gray-900"
-      }   w-full transition-colors ease-in-out duration-300 `}
+          ? "bg-white/90 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm"
+          : "bg-transparent py-6"
+      }`}
     >
-      <nav className="max-w-[1366px] h-[100px] flex justify-between p-4 items-center">
-        <div className="">
-          {header ? (
-            <Image src={theWhiteLogo} width={130} height={100} />
-          ) : (
-            <Image src={logo} width={130} height={100} />
-          )}
+      <nav className="max-w-[1366px] mx-auto px-6 lg:px-12 flex justify-between items-center">
+        <div className="flex-shrink-0 cursor-pointer">
+          <Link to="top" smooth={true} duration={500}>
+            <Image src={logo} alt="Logo" width={110} height={40} className="hover:scale-105 transition-transform" />
+          </Link>
         </div>
 
-        <ul className="hidden md:flex uppercase font-semibold text-1xl ">
-          <li className="mr-4 lg:mr-8 cursor-pointer">
-            <Link to="top" smooth={true} offset={-180} duration={500}>
-              home
-            </Link>
-          </li>
-          <li className="mr-4 lg:mr-8 cursor-pointer">
-            <Link to="about" smooth={true} offset={-200} duration={500}>
-              about
-            </Link>
-          </li>
-          <li className="mr-4 lg:mr-8 cursor-pointer">
-            <Link to="services" smooth={true} offset={-200} duration={500}>
-              services
-            </Link>
-          </li>
-          <li className="mr-4 lg:mr-8 cursor-pointer">
-            <Link to="skills" smooth={true} offset={-180} duration={500}>
-              skills
-            </Link>
-          </li>
-
-          <li className="mr-4 lg:mr-8 cursor-pointer">
-            <Link to="portfolio" smooth={true} offset={-180} duration={500}>
-              portfolio
-            </Link>
-          </li>
-
-          <li className="mr-4 lg:mr-8 cursor-pointer">
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex items-center gap-8 font-heading text-sm font-medium tracking-wide">
+          {navLinks.map((link) => (
+            <li key={link.name} className="relative group cursor-pointer text-slate-600 hover:text-cyan-600 transition-colors">
+              <Link to={link.to} smooth={true} offset={link.offset} duration={500}>
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-cyan-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
+          ))}
+          <li className="ml-4">
             <Link to="contact" smooth={true} offset={-180} duration={500}>
-              contact
+              <button className="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md shadow-indigo-500/25 hover:shadow-cyan-500/40 transform hover:-translate-y-0.5">
+                Hire Me
+              </button>
             </Link>
           </li>
         </ul>
 
-        <div
-          onClick={handleSmalleNavigation}
-          className="flex md:hidden border border-solid border-gray-900"
-        >
+        {/* Mobile Menu Toggle */}
+        <div onClick={handleSmalleNavigation} className="md:hidden flex items-center cursor-pointer z-50">
           {menuIcon ? (
-            <XMarkIcon
-              className={`${
-                header
-                  ? "text-white border border-solid border-white "
-                  : "text-gray-900 border border-solid border-gray-900"
-              }  h-8 w-8 `}
-            />
+            <XMarkIcon className="h-8 w-8 text-slate-900 transition-transform duration-300 rotate-90" />
           ) : (
-            <Bars3Icon
-              className={`${
-                header
-                  ? "text-white border border-solid border-white"
-                  : "text-gray-900 border border-solid border-gray-900"
-              }  h-8 w-8 `}
-            />
+            <Bars3Icon className="h-8 w-8 text-slate-900 transition-transform duration-300" />
           )}
         </div>
 
+        {/* Mobile Nav */}
         <div
-          className={
-            menuIcon
-              ? "md:hidden absolute top-[100px] right-0 bottom-0 left-0 flex justify-center text-center items-center w-full h-screen bg-gray-900 text-white ease-in duration-300"
-              : "md:hidden absolute top-[100px] right-0 bottom-0 left-[-100%] flex justify-center text-center items-center w-full h-screen bg-gray-900 text-white ease-in duration-300"
-          }
+          className={`absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center transition-all duration-500 ${
+            menuIcon ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+          } md:hidden`}
         >
-          <div className="w-full">
-            <ul className="uppercase font-bold text-2xl ">
-              <li className="py-5 cursor-pointer">
+          <ul className="flex flex-col gap-8 text-center font-heading text-2xl font-semibold w-full">
+            {navLinks.map((link) => (
+              <li key={link.name} className="cursor-pointer text-slate-700 hover:text-cyan-600 transition-colors">
                 <Link
-                  to="top"
+                  to={link.to}
                   smooth={true}
-                  offset={-200}
+                  offset={link.offset}
                   duration={500}
                   onClick={handleSmalleNavigation}
                 >
-                  home
+                  {link.name}
                 </Link>
               </li>
-
-              <li className="py-5 cursor-pointer">
-                <Link
-                  to="about"
-                  smooth={true}
-                  offset={-200}
-                  duration={500}
-                  onClick={handleSmalleNavigation}
-                >
-                  about
-                </Link>
-              </li>
-
-              <li className="py-5 cursor-pointer">
-                <Link
-                  to="services"
-                  smooth={true}
-                  offset={-200}
-                  duration={500}
-                  onClick={handleSmalleNavigation}
-                >
-                  services
-                </Link>
-              </li>
-
-              <li className="py-5 cursor-pointer">
-                <Link
-                  to="skills"
-                  smooth={true}
-                  offset={-200}
-                  duration={500}
-                  onClick={handleSmalleNavigation}
-                >
-                  skills
-                </Link>
-              </li>
-
-              <li className="py-5 cursor-pointer">
-                <Link
-                  to="portfolio"
-                  smooth={true}
-                  offset={-200}
-                  duration={500}
-                  onClick={handleSmalleNavigation}
-                >
-                  portfolio
-                </Link>
-              </li>
-
-              <li className="py-5 cursor-pointer">
-                <Link
-                  to="contact"
-                  smooth={true}
-                  offset={-200}
-                  duration={500}
-                  onClick={handleSmalleNavigation}
-                >
-                  contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
       </nav>
     </header>
