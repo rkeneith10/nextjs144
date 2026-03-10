@@ -122,7 +122,7 @@ const Contact = () => {
                   value={formData.userName}
                   onChange={handleChange}
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Enter your name"
                   id="userName"
                   name="userName"
                   className="bg-slate-50 border border-slate-200 rounded-xl w-full p-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all bg-opacity-70"
@@ -135,7 +135,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="Enter your email"
                   id="email"
                   name="email"
                   className="bg-slate-50 border border-slate-200 rounded-xl w-full p-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all bg-opacity-70"
@@ -149,7 +149,7 @@ const Contact = () => {
                   onChange={handleChange}
                   id="message"
                   name="message"
-                  placeholder="How can I help you?"
+                  placeholder="Enter your message"
                   rows="5"
                   className="bg-slate-50 border border-slate-200 rounded-xl w-full p-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all resize-none bg-opacity-70"
                 ></textarea>
