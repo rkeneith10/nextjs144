@@ -1,5 +1,5 @@
 "use client";
-import { FaCube, FaDatabase, FaFileCode } from "react-icons/fa";
+import { FaCube, FaDatabase, FaFileCode, FaServer } from "react-icons/fa";
 
 const Skills = () => {
   const skillsData = [
@@ -28,6 +28,16 @@ const Skills = () => {
         "Hands-on experience with MongoDB, PostgreSQL and MySQL.",
         "Database design and optimization for efficient data storage."
       ]
+    },
+    {
+      title: "Deployment & DevOps",
+      icon: <FaServer size={30} className="text-purple-500" />,
+      items: [
+        "Configuration and management of Linux servers (Ubuntu/Debian) with Nginx as a Reverse Proxy.",
+        "Deploying applications with PM2 for Node.js and Gunicorn for Django.",
+        "Implementing SSL certificates (Certbot/Let's Encrypt) and securing access via SSH.",
+      
+      ]
     }
   ];
 
@@ -47,7 +57,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillsData.map((skill, i) => (
             <div key={i} className="group relative">
               <div className="absolute inset-0 bg-white rounded-2xl transform transition-transform duration-500 group-hover:-translate-y-2 shadow-xl border border-slate-100"></div>

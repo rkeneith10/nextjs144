@@ -2,6 +2,12 @@
 import Image from "next/image";
 
 const projects = [
+    {
+    title: "E-commerces Store", 
+    description: "A  e-commerces app, built with Nextjs for frontend and Django for backend, that allows users to browse products, place online orders.",
+    link: "https://foundfancy.store/",
+    image: "/images/store.png",
+  },
   {
     title: "Food Delivery App",
     description: "A modern food delivery platform that allows users to browse menus, place online orders, and track deliveries in real time. Built with Next.js and integrated with a secure API for order management.",
